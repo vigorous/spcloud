@@ -1,0 +1,14 @@
+#服务端口
+server:
+  port: 8761
+
+#1.服务主机名称
+eureka:
+  instance:
+    hostname: localhost
+  #2.声明为eureka server服务注册中心
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
