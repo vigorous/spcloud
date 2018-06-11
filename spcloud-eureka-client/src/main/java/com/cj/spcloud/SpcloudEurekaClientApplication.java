@@ -39,7 +39,7 @@ public class SpcloudEurekaClientApplication {
      */
     @RequestMapping("/hello")
     public String hello(@RequestParam String name) {
-        return "hi " + name + ", i am from port:" + port;
+        return "hello " + name + ", i am from port:" + port;
     }
 
     /**
