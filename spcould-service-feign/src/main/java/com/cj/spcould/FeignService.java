@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @version $Id$
  * @since 1.0
  */
-@FeignClient(value = "spcloud-eureka-client")
+@FeignClient(value = "spcloud-eureka-client", fallback = FeignServiceHystrix.class)
 public interface FeignService {
     /**
      * sayHi
