@@ -16,12 +16,24 @@ public class HelloController {
     HelloService helloService;
 
     /**
-     * hi
+     * hi方法
+     *
      * @param name 名称
      * @return String
      */
     @RequestMapping(value = "/hi")
     public String hi(@RequestParam String name) {
+        return helloService.hiService(name);
+    }
+
+    /**
+     * hello方法
+     *
+     * @param name 名称
+     * @return String
+     */
+    @RequestMapping(value = "/hello")
+    public String hello(@RequestParam String name) {
         return helloService.hiService(name);
     }
 
