@@ -39,4 +39,15 @@ public class FeignController {
     public String sayHi(@RequestParam String name) {
         return feignService.sayHi("rose");
     }
+
+    /**
+     * sayHello
+     *
+     * @param name 姓名
+     * @return String
+     */
+    @RequestMapping(value = "/sayHello", method = RequestMethod.GET)
+    public String sayHello(@RequestParam String name) {
+        return feignService.sayHello("fezz");
+    }
 }
