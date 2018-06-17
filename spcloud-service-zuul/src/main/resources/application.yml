@@ -10,7 +10,7 @@ server:
 #
 spring:
   application:
-    name: service-zuul
+    name: spcloud-service-zuul
 zuul:
   routes:
     api-a:
