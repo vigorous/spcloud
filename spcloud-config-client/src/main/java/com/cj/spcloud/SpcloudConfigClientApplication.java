@@ -10,15 +10,28 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SpcloudConfigClientApplication {
 
+    /**
+     * 主方法
+     *
+     * @param args 参数
+     */
     public static void main(String[] args) {
         SpringApplication.run(SpcloudConfigClientApplication.class, args);
     }
 
+    /**
+     * 远程服务器参数
+     */
     @Value("${foo}")
     String foo;
 
-    @RequestMapping(value = "/hi")
-    public String hi(){
+    /**
+     * 获取远程服务器参数
+     *
+     * @return String
+     */
+    @RequestMapping(value = "/getRemoteFooParam")
+    public String getRemoteFooParam() {
         return foo;
     }
 
